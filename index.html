@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bug Bounty Scanner</title>
+    <style>
+        body { font-family: Arial; padding: 30px; background-color: #f4f4f4; }
+        input, button { padding: 10px; font-size: 16px; margin-top: 10px; width: 300px; }
+        #result { margin-top: 20px; white-space: pre-wrap; background: #fff; padding: 15px; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h2>🔍 Bug Bounty Scanner</h2>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter full URL (http://...)" required>
+        <br>
+        <button type="submit">Scan</button>
+    </form>
+
+    {% if result %}
+    <div id="result">
+        <h4>🔎 Scan Result:</h4>
+        <pre>{{ result }}</pre>
+    </div>
+    {% endif %}
+</body>
+</html>
